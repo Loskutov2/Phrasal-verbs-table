@@ -1,7 +1,3 @@
-html{
-    height: min-content;
-    width: min-content;
-}
 body{
     margin: 0;
     overscroll-behavior: none;
@@ -9,13 +5,22 @@ body{
     text-align: center;
     box-sizing: border-box;
 }
+  
+html::-webkit-scrollbar {
+    display: none;             
+}
+  
 table{
     border-collapse: collapse;
     min-height: 100vh;
+    @media screen and (max-width: 1000px) {
+        font-size: 200%;
+    }
 }
 td,th{
-    padding: 0 0.5rem;
+    padding: 0.5rem;
     border-left: #9494944c 1px solid;
+    white-space: nowrap;
 }
 
 td:first-child, th{
@@ -35,9 +40,6 @@ th{
 }
 tr:nth-child(2n){
     background-color: #d3d3d3;
-}
-tr{
-    height: 4rem;
 }
 th:first-child{
     left: 0;
